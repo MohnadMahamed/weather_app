@@ -1,10 +1,11 @@
 # weather_app
 
-A new Flutter project.
+Weather App project.
 
 ## Getting Started
 
-https://user-images.githubusercontent.com/62365860/198957037-0231e70a-1783-430b-95bc-e001232851f9.mp4
+https://user-images.githubusercontent.com/62365860/198959623-196e1b5e-8928-4812-ad29-289f1986bb2b.mp4
+
 
 This project is a starting point for a Flutter application.
 
