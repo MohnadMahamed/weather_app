@@ -1,6 +1,5 @@
 import 'package:get/instance_manager.dart';
 import 'package:weather_app/controllers/home_controllers.dart';
-import 'package:weather_app/shared/components/components.dart';
 
 class HomeBinding implements Bindings {
   @override

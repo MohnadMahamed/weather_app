@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_app/controllers/home_controllers.dart';
-import 'package:weather_app/shared/components/components.dart';
 import 'package:weather_app/shared/styles/colors.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
-import 'package:weather_app/widget/drawer/locations_list.dart';
 import 'package:weather_app/widget/drawer/info.dart';
 import 'package:weather_app/widget/drawer/other_locations.dart';
 import 'package:weather_app/widget/drawer/your_location.dart';
@@ -59,7 +57,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                   ),
                                   const MyDivider(),
                                   SizedBox(
-                                    height: Dimensions.height30,
+                                    height: Dimensions.height20,
                                   ),
                                   //Other Locations
                                   const OtherLocations(),
@@ -87,14 +85,13 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                             Icon(
                                               Icons.info_outline,
                                               color: Colors.white,
-                                              size: Dimensions.font26,
+                                              size: Dimensions.iconSize24,
                                             ),
                                             SizedBox(
                                               width: Dimensions.width10,
                                             ),
-                                            SmallText(
+                                            const SmallText(
                                               text: 'Report wrong Location',
-                                              size: Dimensions.font20,
                                             ),
                                           ],
                                         ),
@@ -120,14 +117,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                             Icon(
                                               Icons.mail_outline_rounded,
                                               color: Colors.white,
-                                              size: Dimensions.font26,
+                                              size: Dimensions.iconSize24,
                                             ),
                                             SizedBox(
                                               width: Dimensions.width10,
                                             ),
-                                            SmallText(
+                                            const SmallText(
                                               text: 'Contact us',
-                                              size: Dimensions.font20,
+                                              // size: Dimensions.font20,
                                             ),
                                           ],
                                         ),
@@ -144,7 +141,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                                   // drawerList(Icons.archive, "Archive", 4),
                                   // drawerList(Icons.block, "Spam", 5),
                                   const SizedBox(
-                                    height: 1000,
+                                    height: 50,
                                   )
                                 ],
                               ),

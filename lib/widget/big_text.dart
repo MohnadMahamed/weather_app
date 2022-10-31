@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
 
 class BigText extends StatelessWidget {
@@ -19,12 +20,11 @@ class BigText extends StatelessWidget {
     return Text(
       text,
       maxLines: 1,
-      style: TextStyle(
-        fontFamily: 'jannah',
-        overflow: overflow,
+      overflow: TextOverflow.ellipsis,
+      style: GoogleFonts.kanit(
         color: color,
-        fontSize: size == 0 ? Dimensions.font30 : size,
-        fontWeight: FontWeight.w400,
+        fontSize: size == 0 ? Dimensions.font26 : size,
+        fontWeight: FontWeight.w500,
       ),
     );
   }

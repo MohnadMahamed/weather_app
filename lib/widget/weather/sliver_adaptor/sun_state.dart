@@ -38,7 +38,7 @@ class SunState extends GetView<HomeController> {
                     top: Dimensions.height20,
                     left: Dimensions.width30,
                     right: Dimensions.width30),
-                height: Dimensions.height20 * 10,
+                height: Dimensions.height20 * 8,
                 width: Dimensions.screenWidth,
                 decoration: BoxDecoration(
                     boxShadow: const [
@@ -60,26 +60,28 @@ class SunState extends GetView<HomeController> {
                     color: Colors.white.withOpacity(.8)),
                 child: Center(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const SmallText(
-                            text: 'Sunrise',
-                            color: Colors.black87,
-                          ),
-                          SmallText(
-                            text: DateFormat('hh:mm a').format(sunrise),
-                            color: Colors.black87,
-                          ),
-                          SizedBox(
-                            height: Dimensions.height20 * 5,
-                            width: Dimensions.width20 * 5,
-                            child: Lottie.asset('assets/json/sunrise.json'),
-                          ),
-                        ],
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const SmallText(
+                              text: 'Sunrise',
+                              color: Colors.black87,
+                            ),
+                            SmallText(
+                              text: DateFormat('hh:mm a').format(sunrise),
+                              color: Colors.black87,
+                            ),
+                            SizedBox(
+                              height: Dimensions.height20 * 4,
+                              width: Dimensions.width20 * 4,
+                              child: Lottie.asset('assets/json/sunrise.json'),
+                            ),
+                          ],
+                        ),
                       ),
                       Container(
                         margin:
@@ -88,23 +90,25 @@ class SunState extends GetView<HomeController> {
                         width: Dimensions.width10 / 5,
                         color: Colors.black26,
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const SmallText(
-                            text: 'Sunset',
-                            color: Colors.black87,
-                          ),
-                          SmallText(
-                            text: DateFormat('hh:mm a').format(sunset),
-                            color: Colors.black87,
-                          ),
-                          SizedBox(
-                            height: Dimensions.height20 * 5,
-                            width: Dimensions.width20 * 5,
-                            child: Lottie.asset('assets/json/sunset.json'),
-                          ),
-                        ],
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const SmallText(
+                              text: 'Sunset',
+                              color: Colors.black87,
+                            ),
+                            SmallText(
+                              text: DateFormat('hh:mm a').format(sunset),
+                              color: Colors.black87,
+                            ),
+                            SizedBox(
+                              height: Dimensions.height20 * 4,
+                              width: Dimensions.width20 * 4,
+                              child: Lottie.asset('assets/json/sunset.json'),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

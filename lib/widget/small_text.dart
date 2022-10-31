@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
 
 class SmallText extends StatelessWidget {
@@ -18,12 +19,14 @@ class SmallText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(
-        fontFamily: 'jannah',
+      maxLines: 2,
+      overflow: TextOverflow.fade,
+      style: GoogleFonts.cairo(
         // overflow: TextOverflow.ellipsis,
         height: height,
         color: color,
-        fontSize: size == 0 ? Dimensions.font20 : size,
+        fontWeight: FontWeight.w800,
+        fontSize: size == 0 ? Dimensions.font16 : size,
       ),
     );
   }

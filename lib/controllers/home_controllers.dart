@@ -1,8 +1,6 @@
 import 'dart:developer';
-
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:weather_app/Data/services/weather_services.dart';
-import 'package:weather_app/helper/cash_helper.dart';
 import 'package:weather_app/model/current_weather_model.dart';
 import 'package:weather_app/model/five_day_weather_model.dart';
 // import '/model/current_weather_data.dart';
@@ -102,7 +100,7 @@ class HomeController extends GetxController {
       fiveDaysData = data;
       update();
     }, onError: (error) {
-      print(error);
+      log(error.toString());
       update();
     });
   }

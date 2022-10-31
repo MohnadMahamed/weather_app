@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:weather_app/shared/components/components.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';

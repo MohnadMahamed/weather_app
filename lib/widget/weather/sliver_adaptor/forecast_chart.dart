@@ -16,7 +16,7 @@ class ForecastChart extends StatelessWidget {
           ? Container(
               margin: EdgeInsets.symmetric(horizontal: Dimensions.width20),
               padding: EdgeInsets.all(Dimensions.width10),
-              height: Dimensions.height30 * 8,
+              height: Dimensions.height20 * 8,
               width: double.infinity,
               decoration: BoxDecoration(
                   boxShadow: const [

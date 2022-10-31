@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
+import 'package:weather_app/widget/big_text.dart';
+import 'package:weather_app/widget/small_text.dart';
 
 class InfoWidget extends StatelessWidget {
   const InfoWidget({Key? key}) : super(key: key);
@@ -9,7 +11,7 @@ class InfoWidget extends StatelessWidget {
     return Row(
       children: [
         const CircleAvatar(
-          radius: 25,
+          radius: 30,
           backgroundImage: AssetImage('assets/me.jpg'),
         ),
         const SizedBox(
@@ -18,19 +20,11 @@ class InfoWidget extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Mohnad Mahamed',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: Dimensions.font20),
-            ),
+            BigText(text: 'Mohnad Mahamed', size: Dimensions.font16),
             const SizedBox(
-              height: 3,
+              height: 5,
             ),
-            Text('mohnadmahamed@gmail.com',
-                style:
-                    TextStyle(color: Colors.white, fontSize: Dimensions.font12))
+            SmallText(text: 'mohnad7@gmail.com', size: Dimensions.font12)
           ],
         )
       ],

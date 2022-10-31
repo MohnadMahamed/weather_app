@@ -1,4 +1,4 @@
-import 'package:dots_indicator/dots_indicator.dart';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
@@ -38,6 +38,10 @@ class BottomNavBar extends StatelessWidget {
                 //     builder: (context) => MyHomePageState(),
                 //   ),
                 // );
+                final sizeHeight = MediaQuery.of(context).size.height;
+                log('height : ${sizeHeight.toString()}');
+                final sizeWidth = MediaQuery.of(context).size.width;
+                log('width : ${sizeWidth.toString()}');
               },
               icon: const Icon(
                 Icons.abc,

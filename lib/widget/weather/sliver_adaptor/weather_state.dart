@@ -16,7 +16,7 @@ class WeatherState extends GetView<HomeController> {
           ? Container(
               margin: EdgeInsets.symmetric(horizontal: Dimensions.width20),
               padding: EdgeInsets.all(Dimensions.width10),
-              height: Dimensions.font20 * 10,
+              height: Dimensions.height20 * 8,
               width: double.infinity,
               decoration: BoxDecoration(
                   boxShadow: const [
@@ -38,27 +38,29 @@ class WeatherState extends GetView<HomeController> {
                   color: Colors.white.withOpacity(.8)),
               child: Center(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: Dimensions.height20 * 5,
-                          width: Dimensions.width20 * 5,
-                          child: Lottie.asset('assets/json/press.json'),
-                        ),
-                        const SmallText(
-                          text: 'Pressure',
-                          color: Colors.black87,
-                        ),
-                        SmallText(
-                          text:
-                              '${weatherState.currentWeather.main!.pressure!} hPa',
-                          color: Colors.black45,
-                        ),
-                      ],
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: Dimensions.height20 * 4,
+                            width: Dimensions.width20 * 4,
+                            child: Lottie.asset('assets/json/press.json'),
+                          ),
+                          const SmallText(
+                            text: 'Pressure',
+                            color: Colors.black87,
+                          ),
+                          SmallText(
+                            text:
+                                '${weatherState.currentWeather.main!.pressure!} hPa',
+                            color: Colors.black45,
+                          ),
+                        ],
+                      ),
                     ),
                     Container(
                       margin:
@@ -67,24 +69,26 @@ class WeatherState extends GetView<HomeController> {
                       width: 2.0,
                       color: Colors.black26,
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: Dimensions.height20 * 5,
-                          width: Dimensions.width20 * 5,
-                          child: Lottie.asset('assets/json/wind.json'),
-                        ),
-                        const SmallText(
-                          text: 'Wind',
-                          color: Colors.black87,
-                        ),
-                        SmallText(
-                          text:
-                              '${((weatherState.currentWeather.wind!.speed!) * 3.6).round()} Km/h',
-                          color: Colors.black45,
-                        ),
-                      ],
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: Dimensions.height20 * 4,
+                            width: Dimensions.width20 * 4,
+                            child: Lottie.asset('assets/json/wind.json'),
+                          ),
+                          const SmallText(
+                            text: 'Wind',
+                            color: Colors.black87,
+                          ),
+                          SmallText(
+                            text:
+                                '${((weatherState.currentWeather.wind!.speed!) * 3.6).round()} Km/h',
+                            color: Colors.black45,
+                          ),
+                        ],
+                      ),
                     ),
                     Container(
                       margin:
@@ -93,24 +97,26 @@ class WeatherState extends GetView<HomeController> {
                       width: 2.0,
                       color: Colors.black26,
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: Dimensions.height20 * 5,
-                          width: Dimensions.width20 * 5,
-                          child: Lottie.asset('assets/json/humidity.json'),
-                        ),
-                        const SmallText(
-                          text: 'Humidity',
-                          color: Colors.black87,
-                        ),
-                        SmallText(
-                          text:
-                              '${weatherState.currentWeather.main!.humidity!} %',
-                          color: Colors.black45,
-                        ),
-                      ],
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: Dimensions.height20 * 4,
+                            width: Dimensions.width20 * 4,
+                            child: Lottie.asset('assets/json/humidity.json'),
+                          ),
+                          const SmallText(
+                            text: 'Humidity',
+                            color: Colors.black87,
+                          ),
+                          SmallText(
+                            text:
+                                '${weatherState.currentWeather.main!.humidity!} %',
+                            color: Colors.black45,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

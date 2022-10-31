@@ -50,16 +50,18 @@ Widget locationItem({required String cityName, required String degree}) =>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SmallText(text: cityName, size: Dimensions.font20),
+          SizedBox(
+              width: Dimensions.width20 * 4,
+              child: SmallText(text: cityName, size: Dimensions.font16 + 2)),
           Row(
             children: [
               Icon(
                 Icons.wb_sunny,
                 color: Colors.yellowAccent,
-                size: Dimensions.font26,
+                size: Dimensions.iconSize24,
               ),
               SmallText(
-                text: ' ${degree}',
+                text: ' $degree',
                 size: Dimensions.font20,
               ),
             ],

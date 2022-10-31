@@ -39,7 +39,7 @@ class _SliverAdapterState extends State<SliverAdapter> {
         //Forecast For Next 5 Days
         const ForecastChart(),
         SizedBox(
-          height: Dimensions.height30,
+          height: Dimensions.height20,
         ),
       ],
     ));

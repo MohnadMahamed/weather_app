@@ -19,8 +19,8 @@ class SliverTitle extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: Dimensions.width20),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(Dimensions.radius20 * 2),
-                      bottomRight: Radius.circular(Dimensions.radius20 * 2)),
+                      bottomLeft: Radius.circular(Dimensions.radius20),
+                      bottomRight: Radius.circular(Dimensions.radius20)),
                   image: DecorationImage(
                     image: const AssetImage('assets/light.jpg'),
                     fit: BoxFit.cover,
@@ -98,9 +98,9 @@ class SliverTitle extends StatelessWidget {
                       ),
                       SizedBox(
                         height: Dimensions.height20 * 3,
-                        width: Dimensions.width20 * 3,
+                        width: Dimensions.width20 * 2.5,
                         child: Lottie.asset('assets/json/suncloud.json'),
-                      )
+                      ),
                     ],
                   ),
                 ],

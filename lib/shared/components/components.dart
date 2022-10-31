@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -16,22 +17,24 @@ Widget defaultTextFormFeild({
     Padding(
       padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
       child: SizedBox(
-        height: Dimensions.height30 * 2,
-        width: Dimensions.width30 * 13,
+        height: Dimensions.height30 * 1.8,
+        width: Dimensions.width30 * 10,
         child: TextField(
-          style: TextStyle(fontSize: Dimensions.font26, color: Colors.white),
+          style: GoogleFonts.kanit(
+              fontSize: Dimensions.font20, color: Colors.white),
           controller: controller,
           keyboardType: type,
           onChanged: onChanged,
           onSubmitted: onTap,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.only(left: Dimensions.width20),
             filled: true,
             fillColor: Colors.transparent.withOpacity(.5),
             hintText: '$hintText',
             suffixIcon: Icon(suffix, color: Colors.white),
-            hintStyle: TextStyle(
+            hintStyle: GoogleFonts.kanit(
               color: Colors.white,
-              fontSize: Dimensions.font20,
+              fontSize: Dimensions.font16 + 2,
             ),
             border: const OutlineInputBorder(),
             enabledBorder: OutlineInputBorder(

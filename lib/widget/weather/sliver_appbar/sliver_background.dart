@@ -40,7 +40,7 @@ class SliverBackground extends GetView<HomeController> {
                       BigText(
                         text:
                             '${(backgroundController.currentWeather.main!.temp! - 273.15).round().toString()}\u2103',
-                        size: Dimensions.height10 * 5,
+                        size: Dimensions.font30 * 1.5,
                       ),
                       SizedBox(
                         height: Dimensions.height20 * 5,
@@ -57,7 +57,7 @@ class SliverBackground extends GetView<HomeController> {
                         BigText(
                           text: (backgroundController.currentWeather.name)
                               .toString(),
-                          size: Dimensions.font30 * 1.2,
+                          size: Dimensions.font30,
                         ),
                         SizedBox(
                           width: Dimensions.width10 / 2,
@@ -65,7 +65,7 @@ class SliverBackground extends GetView<HomeController> {
                         Icon(
                           Icons.location_on_sharp,
                           color: Colors.white,
-                          size: Dimensions.font26,
+                          size: Dimensions.iconSize24,
                         ),
                       ],
                     ),

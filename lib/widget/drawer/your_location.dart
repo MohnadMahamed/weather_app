@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:weather_app/controllers/home_controllers.dart';
 import 'package:weather_app/shared/components/components.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
+import 'package:weather_app/widget/big_text.dart';
 import 'package:weather_app/widget/small_text.dart';
 
 class YourLocation extends GetView<HomeController> {
@@ -23,14 +24,14 @@ class YourLocation extends GetView<HomeController> {
                         Icon(
                           Icons.location_on_sharp,
                           color: Colors.white,
-                          size: Dimensions.font26,
+                          size: Dimensions.iconSize24,
                         ),
                         SizedBox(
-                          width: Dimensions.width10,
+                          width: Dimensions.width10 / 2,
                         ),
-                        SmallText(
+                        BigText(
                           text: 'Your Location',
-                          size: Dimensions.font20,
+                          size: Dimensions.font16 + 3,
                         ),
                       ],
                     ),
@@ -47,17 +48,17 @@ class YourLocation extends GetView<HomeController> {
                             icon: Icon(
                               Icons.gps_fixed_rounded,
                               color: Colors.white,
-                              size: Dimensions.font26,
+                              size: Dimensions.iconSize24,
                             )),
                         SizedBox(
-                          width: Dimensions.width10,
+                          width: Dimensions.width15,
                         ),
                       ],
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: Dimensions.height20,
+                  height: Dimensions.height10,
                 ),
                 InkWell(
                   onTap: () {
@@ -75,16 +76,20 @@ class YourLocation extends GetView<HomeController> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SmallText(
+                        SizedBox(
+                          width: Dimensions.font20 * 4,
+                          child: SmallText(
                             text: locationController.currentLocaionWeather.name
                                 .toString(),
-                            size: Dimensions.font20),
+                            size: Dimensions.font16 + 2,
+                          ),
+                        ),
                         Row(
                           children: [
                             Icon(
                               Icons.wb_sunny,
                               color: Colors.yellowAccent,
-                              size: Dimensions.font26,
+                              size: Dimensions.iconSize24,
                             ),
                             SmallText(
                               text:

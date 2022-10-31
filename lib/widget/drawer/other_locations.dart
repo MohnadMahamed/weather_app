@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_app/controllers/home_controllers.dart';
-import 'package:weather_app/helper/cash_helper.dart';
-import 'package:weather_app/model/current_weather_model.dart';
 import 'package:weather_app/shared/components/components.dart';
 import 'package:weather_app/shared/styles/dimensions.dart';
+import 'package:weather_app/widget/big_text.dart';
 import 'package:weather_app/widget/drawer/locations_list.dart';
 import 'package:weather_app/widget/small_text.dart';
 
@@ -23,14 +22,14 @@ class OtherLocations extends StatelessWidget {
             Icon(
               Icons.add_location_outlined,
               color: Colors.white,
-              size: Dimensions.font26,
+              size: Dimensions.iconSize24,
             ),
             SizedBox(
               width: Dimensions.width10,
             ),
-            SmallText(
+            BigText(
               text: 'Other Locations',
-              size: Dimensions.font20,
+              size: Dimensions.font16 + 2,
             ),
           ],
         ),
@@ -74,16 +73,18 @@ Widget locationItem({required String cityName, required String degree}) =>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SmallText(text: cityName, size: Dimensions.font20),
+          SizedBox(
+              width: Dimensions.width20,
+              child: SmallText(text: cityName, size: Dimensions.font16 + 2)),
           Row(
             children: [
               Icon(
                 Icons.wb_sunny,
                 color: Colors.yellowAccent,
-                size: Dimensions.font26,
+                size: Dimensions.iconSize24,
               ),
               SmallText(
-                text: ' ${degree}',
+                text: ' $degree',
                 size: Dimensions.font20,
               ),
             ],
